@@ -10,7 +10,10 @@ public class SpecialObjectController : MonoBehaviour
     private SpriteRenderer objectRenderer; // 物体的Renderer
     private Rigidbody2D objectRb;
 
-    void Start()
+	public float lightDuration = 2f; // 光照时间持续时间
+	private float lightTimer; // 计时器
+
+	void Start()
     {
         // 获取物体的Collider，Renderer，Righbody2D组件
         objectCollider = GetComponent<Collider2D>();
@@ -31,14 +34,22 @@ public class SpecialObjectController : MonoBehaviour
         // 如果Light靠近特殊物体，则显示并启用Collider和重力
         if (distanceToLight < activationDistance)
         {
-            objectCollider.enabled = true;
-            objectRenderer.enabled = true;
-            objectRb.bodyType = RigidbodyType2D.Dynamic;
+			// 如果照到了，开始计时
+			lightTimer += Time.deltaTime;
+            // 如果计时器超过了光照持续时间
+            if (lightTimer > lightDuration)
+                {
+                objectCollider.enabled = true;
+                objectRenderer.enabled = true;
+                objectRb.bodyType = RigidbodyType2D.Dynamic;
+            }
         }
         // 如果Light远离特殊物体，则隐藏并禁用Collider和重力
         else
         {
-            objectCollider.enabled = false;
+            lightTimer = 0f;
+
+			objectCollider.enabled = false;
             objectRenderer.enabled = false;
             objectRb.bodyType = RigidbodyType2D.Kinematic;
             objectRb.velocity = Vector2.zero;

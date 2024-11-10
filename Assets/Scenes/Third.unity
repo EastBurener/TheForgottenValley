@@ -5109,7 +5109,7 @@ Transform:
   m_GameObject: {fileID: 835080275}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.38, y: 3.3, z: 0}
+  m_LocalPosition: {x: 12.19, y: -1.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5164,7 +5164,7 @@ MonoBehaviour:
   target: {fileID: 2039228507}
   smoothing: 1
   minPosition: {x: 0, y: 0}
-  maxPosition: {x: 0, y: 0}
+  maxPosition: {x: 1000, y: 1000}
 --- !u!4 &1124913248
 Transform:
   m_ObjectHideFlags: 0

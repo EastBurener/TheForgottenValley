@@ -553,7 +553,6 @@ GameObject:
   - component: {fileID: 262540991}
   - component: {fileID: 262540990}
   - component: {fileID: 262540992}
-  - component: {fileID: 262540993}
   m_Layer: 0
   m_Name: Light
   m_TagString: Untagged
@@ -642,41 +641,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayDistance: 0.2
---- !u!58 &262540993
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 262540989}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &289978782
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,6 +3124,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2039228507}
   smoothing: 1
+  minPosition: {x: 0, y: 0}
+  maxPosition: {x: 191.4, y: 0}
 --- !u!4 &1124913248
 Transform:
   m_ObjectHideFlags: 0
@@ -4550,7 +4516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 621f37ec9929a1a4a9799ce30be989d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 5
+  runSpeed: 7
   jumpSpeed: 5
 --- !u!4 &2039228507
 Transform:

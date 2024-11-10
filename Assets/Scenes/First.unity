@@ -3408,18 +3408,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
+    m_MaxSize: 43
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u8FD9\u662F\u3002\u3002\u3002\u54EA\u91CC\uFF1F\u6211\u662F\u8C01\uFF1F\u53F6\u3002\u3002\u3002\u53F6\u660E\u66E6\uFF1F\u5BF9\uFF01\u53F6\u660E\u66E6\uFF01\u4E3A\u4EC0\u4E48\u3002\u3002\u3002\u4E3A\u4EC0\u4E48\u53EA\u8BB0\u5F97\u6211\u7684\u540D\u5B57\uFF0C\u5176\u4ED6\u4E1C\u897F\u90FD\u56DE\u5FC6\u4E0D\u8D77\u6765\uFF1F"
+  m_Text: "\u201C\u8FD9\u662F\u3002\u3002\u3002\u54EA\u91CC\uFF1F\u6211\u662F\u8C01\uFF1F\u53F6\u3002\u3002\u3002\u53F6\u660E\u66E6\uFF1F\u5BF9\uFF01\u53F6\u660E\u66E6\uFF01\u4E3A\u4EC0\u4E48\u3002\u3002\u3002\u4E3A\u4EC0\u4E48\u53EA\u8BB0\u5F97\u6211\u7684\u540D\u5B57\uFF0C\u5176\u4ED6\u4E1C\u897F\u90FD\u56DE\u5FC6\u4E0D\u8D77\u6765\uFF1F\u201D"
 --- !u!222 &1165580478
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4852,7 +4852,7 @@ Transform:
   m_GameObject: {fileID: 2039228505}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.25, y: -2.47, z: 0}
+  m_LocalPosition: {x: -5.31, y: -2.47, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

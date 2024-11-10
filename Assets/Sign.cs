@@ -26,7 +26,8 @@ public class Sign : MonoBehaviour
 		dialogBox.transform.position = Camera.main.WorldToScreenPoint(characterTransform.position + offset);
 
 		if (Input.GetKeyDown(KeyCode.E)&& isPlayerInSign)
-        {
+			//if ( isPlayerInSign)
+			{
 			if (!eKeyPressedOnce)
 			{
 				

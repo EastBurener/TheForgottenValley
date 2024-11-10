@@ -7,34 +7,41 @@ public class RandomDoorPortal : MonoBehaviour
 	public string[] sceneNames;
 	public bool isExitDoor = true;
 
+
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.CompareTag("Player"))
-		{
-			if (isExitDoor)
+		//if (Input.GetKeyDown(KeyCode.F))
+		//{
+
+
+			if (other.CompareTag("Player"))//&& Input.GetKeyDown(KeyCode.E))
 			{
-				GameController.Instance.IncrementVictoryPoints();
-				int a = GameController.Instance.vpoint();
-				//Debug.Log(a);
-				if (a >= 3)
+				if (isExitDoor)
 				{
-					SceneManager.LoadScene("jieshu");
+					GameController.Instance.IncrementVictoryPoints();
+					int v_point = GameController.Instance.vpoint();
+					//Debug.Log(a);
+					if (v_point >= 5)
+					{
+						SceneManager.LoadScene("Third");
+					}
+					else
+					{
+						string randomSceneName = GetRandomSceneNameExcludingJieshu();
+						SceneManager.LoadScene(randomSceneName);
+					}
 				}
 				else
 				{
-					string randomSceneName = GetRandomSceneNameExcludingJieshu();
-					SceneManager.LoadScene(randomSceneName);
+					//if ( Input.GetKeyDown(KeyCode.E))
+					//string randomSceneName = GetRandomSceneNameExcludingJieshu();
+					GameController.Instance.delectpoint();//清空分数,回到开始
+
+					//GameController.Instance.IncrementVictoryPoints();
+
 				}
 			}
-			else
-			{
-				//string randomSceneName = GetRandomSceneNameExcludingJieshu();
-				GameController.Instance.delectpoint();//清空分数,回到开始
-				
-				//GameController.Instance.IncrementVictoryPoints();
-				
-			}
-		}
+		//}
 	}
 
 	private string GetRandomSceneNameExcludingJieshu()
@@ -50,7 +57,7 @@ public class RandomDoorPortal : MonoBehaviour
 		{
 			int randomIndex = Random.Range(0, sceneNames.Length);
 			sceneName = sceneNames[randomIndex];
-		} while (sceneName == "jieshu");
+		} while (sceneName == "Third");
 
 		return sceneName;
 	}

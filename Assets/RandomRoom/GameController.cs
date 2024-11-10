@@ -26,9 +26,9 @@ public class GameController : MonoBehaviour
 		victoryPoints++;
 		Debug.Log("Victory Points: " + victoryPoints);
 
-		if (victoryPoints == 3)
+		if (victoryPoints == 5)//包含最开始的门，所以在4基础上加1才胜利
 		{
-			LoadScene("jieshu");
+			LoadScene("Third");
 		}
 	}
 
@@ -36,7 +36,7 @@ public class GameController : MonoBehaviour
 	{
 		victoryPoints = 0;
 		Debug.Log("Victory Points: " + victoryPoints);
-		LoadScene("kaishi");
+		LoadScene("Second");
 	}
 
 	private void LoadScene(string sceneNamse)

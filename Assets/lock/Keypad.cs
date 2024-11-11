@@ -8,7 +8,7 @@ public class Keypad : MonoBehaviour
     [SerializeField] private Text Ans;
    // [SerializeField] private Animator Door;
 
-    private string Answer = "1234";
+    private string Answer = "96";
 
     public void Number(int number)
     {

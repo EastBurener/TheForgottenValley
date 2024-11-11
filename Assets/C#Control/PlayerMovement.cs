@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject myBag;
+    bool isOpen;
+
     public float runSpeed;
     public float jumpSpeed;
 
@@ -24,7 +27,9 @@ public class PlayerMovement : MonoBehaviour
         run();
         jump();
         CheckGrounded();
-    }
+        OpenMyBag();
+
+	}
     void Flip()
     {
         bool PlayerHasXSpeed = Mathf.Abs(myRigidbody.velocity.x) > 0.00001f;//进行运动判断
@@ -66,5 +71,14 @@ public class PlayerMovement : MonoBehaviour
     void CheckGrounded()//请把所有能被玩家踩着跳跃的物体放到Ground层
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
+    }
+
+    void OpenMyBag()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            isOpen = !isOpen;
+            myBag.SetActive(isOpen);
+        }
     }
 }

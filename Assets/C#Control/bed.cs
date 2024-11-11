@@ -12,7 +12,7 @@ public class bed : MonoBehaviour
 	private bool isPlayerInSign;
 	//private bool eKeyPressedOnce = true;
 
-	private float displayTime = 10f; // 对话框显示的时间（秒）
+	private float displayTime = 4f; // 对话框显示的时间（秒）
 	private float timer, timer2; // 计时器
 								 // Start is called before the first frame update
 	void Start()

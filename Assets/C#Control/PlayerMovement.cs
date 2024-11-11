@@ -11,25 +11,20 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D myFeet;
     private Animator MyAnim;
     private bool isGround;
-
-
-	void Start()
+    void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
-		myFeet = GetComponent<BoxCollider2D>();
-		MyAnim = GetComponent<Animator>();
+        myFeet = GetComponent<BoxCollider2D>();
+        MyAnim = GetComponent<Animator>();
+    }
 
-	}
-
-	void Update()
+    void Update()
     {
         Flip();
         run();
         jump();
         CheckGrounded();
- 
-
-	}
+    }
     void Flip()
     {
         bool PlayerHasXSpeed = Mathf.Abs(myRigidbody.velocity.x) > 0.00001f;//进行运动判断
@@ -72,6 +67,4 @@ public class PlayerMovement : MonoBehaviour
     {
         isGround = myFeet.IsTouchingLayers(LayerMask.GetMask("Ground"));
     }
-
-
 }

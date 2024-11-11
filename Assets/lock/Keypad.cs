@@ -9,6 +9,7 @@ public class Keypad : MonoBehaviour
 	[SerializeField] private GameObject door; // 引用到门的游戏对象
 											  // [SerializeField] private Animator Door;
 	[SerializeField] private GameObject doorToOpen;
+	[SerializeField] private GameObject key;
 
 	private string Answer = "96";
 
@@ -26,6 +27,7 @@ public class Keypad : MonoBehaviour
            // StartCoroutine("StopDoor");
 			Destroy(door);
 			doorToOpen.SetActive(true);
+			Destroy(key);
 		}
         else
         {

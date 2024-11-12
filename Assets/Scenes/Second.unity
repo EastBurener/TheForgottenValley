@@ -4839,7 +4839,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524a364a946e77e48a9eb5d0745042eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   deathDelay: 1
 --- !u!95 &2039228513
 Animator:

@@ -1382,6 +1382,7 @@ GameObject:
   m_Component:
   - component: {fileID: 229256893}
   - component: {fileID: 229256892}
+  - component: {fileID: 229256894}
   m_Layer: 0
   m_Name: water (1)
   m_TagString: Trap
@@ -1456,6 +1457,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &229256894
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229256891}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.92031574, y: 0.95832133}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.5, y: 4.22}
+    newSize: {x: 7.5, y: 4.22}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.248271, y: 1.0575275}
+  m_EdgeRadius: 0
 --- !u!1 &244412847
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,8 +6204,8 @@ Transform:
   m_GameObject: {fileID: 730924620}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.65234, y: -16.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 154.8046, y: -16.1, z: 0}
+  m_LocalScale: {x: 0.9881, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7698,8 +7744,8 @@ Transform:
   m_GameObject: {fileID: 1041788357}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180.34851, y: -15.82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 180.2341, y: -15.82, z: 0}
+  m_LocalScale: {x: 0.9911, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -8288,7 +8334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2039228507}
   smoothing: 1
-  minPosition: {x: 0, y: -9}
+  minPosition: {x: 5, y: -9}
   maxPosition: {x: 10000, y: 100}
 --- !u!4 &1124913248
 Transform:

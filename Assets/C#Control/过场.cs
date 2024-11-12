@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class bed : MonoBehaviour
+public class è¿‡åœº : MonoBehaviour
 {
 	public GameObject dialogBox;
 	public Text dialogBoxText;
@@ -12,28 +12,29 @@ public class bed : MonoBehaviour
 	private bool isPlayerInSign;
 	//private bool eKeyPressedOnce = true;
 
-	private float displayTime = 4f; // ¶Ô»°¿òÏÔÊ¾µÄÊ±¼ä£¨Ãë£©
-	private float timer, timer2; // ¼ÆÊ±Æ÷
-								 // Start is called before the first frame update
+	private float displayTime = 4f; // å¯¹è¯æ¡†æ˜¾ç¤ºçš„æ—¶é—´ï¼ˆç§’ï¼‰
+	private float timer; // è®¡æ—¶å™¨
+						 // Start is called before the first frame update
 	void Start()
-    {
+	{
 		timer = 0f;
-		dialogBox.SetActive(false); // È·±£¶Ô»°¿ò¿ªÊ¼Ê±ÊÇ¿É¼ûµÄ
+		dialogBox.SetActive(false); // ç¡®ä¿å¯¹è¯æ¡†å¼€å§‹æ—¶æ˜¯å¯è§çš„
 	}
 
-    // Update is called once per frame
-    void Update()
-    {
+	// Update is called once per frame
+	void Update()
+	{
 		if (isPlayerInSign)
 		//if ( isPlayerInSign)
 		{
-			timer += Time.deltaTime; // ¸üĞÂ¼ÆÊ±Æ÷
+			timer += Time.deltaTime; // æ›´æ–°è®¡æ—¶å™¨
 			dialogBox.SetActive(true);
 		}
 		if (timer >= displayTime)
 		{
-			SceneManager.LoadScene("Second");
-			timer = 0f; // ÖØÖÃ¼ÆÊ±Æ÷
+			dialogBox.SetActive(false);
+			Destroy(gameObject);
+			//timer = 0f; // é‡ç½®è®¡æ—¶å™¨
 		}
 	}
 

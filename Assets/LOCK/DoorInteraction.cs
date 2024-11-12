@@ -4,7 +4,6 @@ public class DoorInteraction : MonoBehaviour
 {
 	public float interactionRadius = 2f; // 玩家与门交互的距离
 	public GameObject passwordLockUI; // 密码锁界面的游戏对象
-
 	private bool isPlayerNear = false;
 
 	void Start()
@@ -30,8 +29,8 @@ public class DoorInteraction : MonoBehaviour
 		// 如果玩家靠近门并且按下了F键
 		if (isPlayerNear && Input.GetKeyDown(KeyCode.F))
 		{
-			// 显示密码锁界面
-			passwordLockUI.SetActive(true);
+			// 切换密码锁界面的显示和隐藏
+			passwordLockUI.SetActive(!passwordLockUI.activeSelf);
 		}
 	}
 }

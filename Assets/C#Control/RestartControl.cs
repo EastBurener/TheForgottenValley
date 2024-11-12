@@ -8,7 +8,7 @@ public class RestartControl : MonoBehaviour
     {
         if (other.CompareTag("Player")) // 确保只有玩家经过时才记录位置
         {
-            RecordPos.lastRecorded = transform.position; // 记录当前位置
+            RecordPosition.lastCheckpointPosition = transform.position; // 记录当前位置
         }
     }
 }

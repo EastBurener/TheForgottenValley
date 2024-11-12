@@ -8,7 +8,6 @@ public class PlayerLife : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator anim;
-    public GameObject player;
     public float deathDelay = 1f; // 死亡动画播放时间
     private float deathTimer;
 
@@ -49,6 +48,14 @@ public class PlayerLife : MonoBehaviour
     private void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        player.transform.position = RecordPos.lastRecorded; // 移至存档点
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (SceneManager.GetActiveScene().name == gameObject.scene.name)
+        {
+            transform.position = RecordPosition.lastCheckpointPosition; // 移至存档点
+            rb.bodyType = RigidbodyType2D.Dynamic; // 恢复物理属性
+        }
     }
 }
